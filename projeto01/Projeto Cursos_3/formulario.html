@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="SoulCode Academy">
+    <title>Desenvolvimento Web</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>    
+    <header>
+        <div class="div-header">
+            <div class="divs-header"><img class="logo" src="img/soulcode.png" alt="Logo da SoulCode Academy" /></div>
+            <div class="div-inscreva divs-header"><a href="formulario.html"><img class="inscreva" src="img/inscreva.png" alt="Botão escrito Inscreva-se" /></a></div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="equipe.html">Sobre Nós</a></li>
+                <li><a href="#">Trilhas</a>
+                    <ul>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="desenvolvimento-ti.html">Desenvolvimento TI</a></li>
+                        <li><a href="ti-software.html">TI e Software</a></li>
+                        <li><a href="desenvolvimento-pessoal.html">Desenvolvimento Pessoal</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="topo"></div>
+    <div class="div-principal">
+        <section class="section-form">
+            <form action="#" method="post">                   
+                <fieldset>
+                    <legend>Formuário de Inscrição</legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="td-form-cursos">
+                                        <div>
+                                        <label for="nome">Nome:</label>
+                                        <input id="nome" class="input-text"  name="nome" required="required" type="text">
+                                        </div>
+                                        <div>
+                                            <label for="idade">Idade:</label>
+                                            <input  id="idade" class="input-text" name="idade" required="required" type="text" pattern="^\d{2}" placeholder="Digite apenas números" maxlength="2"  id="idade">
+                                            <datalist id="idade"></datalist>
+                                        </div>
+                                        <div>
+                                            <label for="genero">Gênero:</label>
+                                            <input id="genero" class="input-text" name="genero" required="required" type="list" list="generos">
+                                            <datalist id="generos">
+                                                <option value="Feminino"></option>
+                                                <option value="Masculino"></option>
+                                                <option value="Personalizado"></option>
+                                            </datalist>
+                                        </div>
+                                        <div>
+                                            <label for="email">E-mail:</label>
+                                            <input id="email" class="input-text" name="email" required="required" type="email" required="required">
+                                        </div>
+                                        <div>
+                                            <label for="telefone">Tel:</label>
+                                            <input id="telefone" class="input-text" name="telefone" required="required" type="tel" maxlenght="10"
+                                            pattern="^\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}$"
+                                            placeholder="(XX)9XXXX-XXXXX">
+                                        </div>
+                                        <div>
+                                            <label for="cpf">CPF:</label>
+                                            <input id="cpf" class="input-text" name="cpf" required="required" type="text" pattern="^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="XXX.XXX.XXX-XX">
+                                        </div>
+                                    </td>
+                                    <td class="td-form-cursos">
+                                        <div>
+                                            <label for="estados">Estado:</label>
+                                            <input id="estados" class="input-text" name="estados" required="required" type="list" list="estados-lista"><br /> 
+                                            <datalist id="estados-lista">
+                                                <option value="Acre(AC)"></option>
+                                                <option value="Amapá (AP)"></option>
+                                                <option value="Alagoas (AL)"></option>
+                                                <option value="Amazonas (AM)"></option>
+                                                <option value="Bahia (BA)"></option>
+                                                <option value="Ceará (CE)"></option>
+                                                <option value="Distrito Federal (DF)"></option>
+                                                <option value="Espírito Santo (ES)"></option>
+                                                <option value="Goiás (GO)"></option>
+                                                <option value="Maranhão(MA)"></option>
+                                                <option value="Mato Grosso (MT)"></option>
+                                                <option value="Mato Grosso do Sul (MS)"></option>
+                                                <option value="Minas Gerais (MG)"></option>
+                                                <option value="Pará (PA)"></option>
+                                                <option value="Paraíba (PB)"></option>
+                                                <option value="Paraná (PR)"></option>
+                                                <option value="Pernambuco (PE)"></option>
+                                                <option value="Piauí (PI)"></option>
+                                                <option value="Rio de Janeiro (RJ)"></option>
+                                                <option value="Rio Grande do Norte (RN)"></option>
+                                                <option value="Rio Grande do Sul (RS)"></option>
+                                                <option value="Rondônia (RO)"></option>
+                                                <option value="Roraima (RR)"></option>
+                                                <option value="Santa Catarina (SC)"></option>
+                                                <option value="São Paulo (SP)"></option>
+                                                <option value="Sergipe (SE)"></option>
+                                                <option value="Tocantins (TO)"></option>    
+                                            </datalist>
+                                        </div>
+                                        <div>
+                                            <label for="cidade">Cidade:</label>
+                                            <input id="cidade" class="input-text" name="cidade" required="required" type="text">
+                                        </div>
+                                        
+                                        <!--Inserir as opções de curso da sua trilha NO VALOR O RESTO PODE DEIXAR IGUAL PARA FACILITAR O CSS-->
+                                        <div>
+                                            <label for="curso">Curso:</label>
+                                            <input id="curso" class="input-text" class="input-text" name="curso" required="required" type="list" list="cursos">
+                                            <datalist id="cursos">
+                                                <option value="Adobe Photoshop"></option>
+                                                <option value="AutoCAD"></option>
+                                                <option value="UX e UI"></option>
+                                                <option value="Corel Draw"></option>
+                                                <option value="HTML/CSS"></option>
+                                                <option value="JavaScript e JQuery"></option>
+                                                <option value="Java e Orientação a Objetos"></option>
+                                                <option value="Android"></option>
+                                                <option value="Manutenção de Computadores"></option>
+                                                <option value="Redes de Computadores"></option>
+                                                <option value="Algoritmos e Lógica de Programação"></option>
+                                                <option value="Python"></option>
+                                                <option value="Inteligência Emocional"></option>
+                                                <option value="Gestão de Pessoas"></option>
+                                                <option value="Como falar bem em Público"></option>
+                                                <option value="Gestão do Tempo"></option>
+                                            </datalist>   
+                                        </div>
+                                        <div>
+                                            <label for="anexo-rg">Anexar RG:</label>
+                                            <input id="anexo-rg" class="anexo" name="rg" required="required" type="file">
+                                        </div>
+                                        <div>
+                                            <label for="anexo-cpf">Anexar CPF:</label>
+                                            <input id="anexo-cpf" class="anexo" name="cpf" required="required" type="file">
+                                        </div>
+                                        <div>
+                                            <label for="comprovante">Comprovante de endereço:</label>
+                                            <input id="comprovante" class="anexo" name="endereco" required="required" type="file">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div>
+                                            <input id="confirmacao" type="checkbox" name="confirmacao" checked required />
+                                            <label for="confirmacao">Confirmo que meus dados estão corretos e são reais.</label>
+                                        </div>
+                                        <div>
+                                            <button id="enviar" class="button-enviar">ENVIAR</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </form> 
+        </section>
+    </div>
+    <footer>
+        <div class="div-footer">
+            <a href="https://twitter.com/soulcodeacademy" target="_blank"><img class="icone" src="img/redes/twitter.png" alt="Ícone Twitter"></a>
+            <a href="https://www.facebook.com/SoulCodeAcademy/" target="_blank"><img class="icone" src="img/redes/facebook.png" alt="Ícone Facebook"></a>
+            <a href="https://www.instagram.com/soulcodeacademy/" target="_blank"><img class="icone" src="img/redes/instagram.png" alt="Ícone Instagram"></a>
+            <a href="https://br.linkedin.com/company/soulcodebrasil" target="_blank"><img class="icone" src="img/redes/linkedin.png" alt="Ícone LinkedIn"></a>
+            <a href="https://www.youtube.com/channel/UCi6cfCiO5WyzTU58s-6geag" target="_blank"><img class="icone" src="img/redes/youtube.png" alt="Ícone Youtube"></a>
+        </div>
+        <div class="info-footer div-footer">| &copySoulCode Cursinho | 2021 | Erika, Fernanda, Geisiane, Marília, Pollyana e Tulani | </div>  
+    </footer>
+</body>
+</html>

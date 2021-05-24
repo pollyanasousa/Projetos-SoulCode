@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal COVID-19 - Governo do Estado de São Paulo</title>
+
+  <link rel="stylesheet" href="API's/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="API's/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+  <script src="API's/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+  <script src="js/fase.js"></script>
+  <link rel="stylesheet" href="css/fase.css">
+  <link rel="icon" href="img/icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="nav">
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fase.html">Fase COVID</a></li>
+        <li><a href="cadastro.html">Vacinação</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><input id="btn1" type="button" value="Acessibilidade" onclick="acessivel()"></li>
+        <li id="dia"></li>
+        <li id="hora"></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    //Dia
+    var d = new Date();
+    var data = d.getDate();
+    var hora = d.getHours();
+    var mes = d.getMonth();
+    var ano = d.getFullYear();
+    // <li id="dia"></li>
+    document.getElementById("dia").innerHTML = data + "/" + mes + "/" + ano;
+    //Hora
+    var hora = d.getHours();
+    var minutos = d.getMinutes();
+    document.getElementById("hora").innerHTML = hora + ":" + minutos;
+  </script>
+  <script>
+    //MENU, ACESSIBILIDADE
+    var o = 0;
+
+    function acessivel() {
+      if (o == 0) {
+        $("section").css("font-size", "180%");
+        $("button").css("font-size", "180%");
+        $("input[placeholder]").css("font-size", "110%");
+        $("input").css("font-size", "180%");
+        o = 1;
+      } else if (o == 1) {
+        $("section").css("font-size", "100%");
+        $("button").css("font-size", "100%");
+        $("input[placeholder]").css("font-size", "100%");
+        $("input").css("font-size", "100%");
+        o = 0;
+      }
+    }
+  </script>
+  <!-- INÍCIO DAS TABELAS-->
+
+  <section>
+    <h2>Critérios de Cálculo de fase</h2>
+    <table style="margin: 0 auto;">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Indicador </th>
+          <th id="f1">Fase 1 (Alerta máximo)</th>
+          <th id="f2">Fase 2 (Controle)</th>
+          <th id="f3">Fase 3 (Flexibilização)</th>
+          <th id="f4">Fase 4 (Abertura Parcial)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Capacidade do sistema de saúde</td>
+          <td>Taxa de Ocupação de leitos UTI COVID</td>
+          <td>Acima de 80%</td>
+          <td>Entre 70% e 80%</td>
+          <td>Entre 70% e 60%</td>
+          <td>Abaixo de 60%</td>
+        </tr>
+        <tr>
+          <td>Leitos de UTI COVID/ 100k habitantes</td>
+          <td>Abaixo de 3,0</td>
+          <td>Entre 3,0 e 5,0</td>
+          <td>Acima de 5,0</td>
+          <td>ACIMA DE 5,0</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Evolução da Pandemia<br></td>
+          <td>Novos casos nos últimos 7 dias / Casos nos 7 dias anteriores</td>
+          <td>Acima de 2,0</td>
+          <td>Entre 1,0 e 2,0</td>
+          <td>Entre 1,0 e 2,0</td>
+          <td>Abaixo de 1,0</td>
+        </tr>
+        <tr>
+          <td>Novas internações nos últimos 7 dias</td>
+          <td>Acima de 1,5</td>
+          <td>Entre 1,0 e 1,5</td>
+          <td>Entre 0,5 e 1,0</td>
+          <td>Abaixo de 0,5</td>
+        </tr>
+        <tr>
+          <td>Óbitos por COVID nos últimos 7 dias</td>
+          <td>Acima de 2,0</td>
+          <td>Entre 1,0 e 2,0<br></td>
+          <td>Entre 0,5 e 1,0</td>
+          <td>Abaixo de 0,5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <div>
+      <h2>
+        Insira os dados de ocupação para saber a fase atual
+      </h2>
+      <table id="ocupacao">
+        <tr>
+          <td>
+            <label for="">Ocupação de UTI</label>
+            <input id="ocup_uti" type="number" min="0" max="100"> %
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Ocupação de enfermaria</label>
+            <input id="ocup_enfer" type="number" min="0" max="100"> %
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input id="result" type="text" disabled placeholder="resultado">
+            <button onclick="calcular()">Calcular</button>
+          </td>
+        </tr>
+      </table>
+      <p id="frase"></p>
+    </div>
+
+    <h2>Abertura dos Setores Econômicos de acordo com as fases</h2>
+
+    <table style="margin: 0 auto;">
+      <thead>
+        <tr>
+          <th>Setores Temáticos<br></th>
+          <th id="f1">Fase1</th>
+          <th id="f2">Fase 2</th>
+          <th id="f3">Fase 3</th>
+          <th id="f4">Fase 4</th>
+          <th id="f5">Fase 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Espaços públicos<br></td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Atividades Imobiliárias<br></td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Concessionárias</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Escritórios</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Bares, restaurantes e similares</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Comércio</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Shopping Center</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>Aberto com restrições</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Salão de Beleza</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>Aberto com restrições</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Academia</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>Aberto com restrições</td>
+          <td>&check;<br></td>
+        </tr>
+        <tr>
+          <td>Teatro, Cinemas</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Eventos que geram aglomeração</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Educação</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&cross;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Transporte<br></td>
+          <td colspan="5">A ser definido<br></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FIM DAS TABELAS -->
+
+  <!-- INÍCIO DO FOOTER -->
+
+  <footer>
+    <p><b>Fernanda | Helena | Monique | Pollyana | Rafaela | &copy; 2021 </b></p>
+
+  </footer>
+
+</body>
+
+</html>

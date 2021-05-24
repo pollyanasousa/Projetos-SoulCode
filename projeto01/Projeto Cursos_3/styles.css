@@ -1,0 +1,385 @@
+body{
+    margin: 0px;
+}
+header{
+    width: 100%;
+    top: 0;
+}
+.div-header{
+    background-color: #38bed3;
+    border-radius: 5px;
+    text-align: center;
+}
+.divs-header{
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+}
+.div-inscreva{
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.inscreva{
+    height: 100px;
+}
+.logo{
+    width: 90%;
+}
+nav{
+    text-align: center;
+    background-color: white;
+}
+.menu{
+    list-style:none;
+    display: inline-block;
+    padding-left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.menu li{
+    position:relative;
+    float:left;
+}
+.menu li a{
+    color:#333; 
+    text-decoration:none; 
+    padding:5px 60px; 
+    display:block;
+    font-weight: bold;
+    font-size: 30px;
+}
+.menu li a:hover{
+    background:#f8d123;
+    color:#fff;
+    -moz-box-shadow:0 3px 10px 0 #CCC;
+    -webkit-box-shadow:0 3px 10px 0 #ccc;
+    text-shadow:0px 0px 5px #fff;
+}
+.menu li ul{
+    position: fixed;  
+    left: 680px; 
+    background-color:#fff;
+    display: none;
+    text-align: center;
+    padding-left: 0px;
+    width: 300px;
+}
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    padding-left: 0;
+}
+.menu li ul li{
+    display:block;
+    width:100%;
+}
+.menu li ul li a{
+    border-bottom:1px solid #c0c0c0;
+    display:block;
+    padding: 10px 0px;
+    font-size: 20px;
+    width: 100%;
+}
+.menu li ul li a:hover{
+    background-color: #17a2b8;
+}
+.nav-sub{
+    background-color: white;
+    border-radius: 20px;
+}
+.sub-menu{
+    list-style:none;
+    display: inline-block;
+    padding-left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.sub-menu li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.sub-menu li a{
+    color:#333; 
+    padding:5px 10px;
+    text-decoration:none;  
+    display:block;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #bfd6da;
+}
+.sub-menu li a:hover{
+    background:#ffc107;
+    -moz-box-shadow:0 3px 10px 0 #CCC;
+    -webkit-box-shadow:0 3px 10px 0 #ccc;
+    text-shadow:0px 0px 5px #fff;
+}
+.div-principal{
+    background-color: rgb(255, 229, 111);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.main-cursos{
+    width: 70%;
+    padding: 20px 20px;
+}
+.aside{
+    width: 30%;
+    background-color: #17a2b8;
+    padding: 20px 20px;
+    vertical-align: top;
+}
+article{
+    padding: 10px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+h1{
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #31160a;
+}
+h2{
+    font-size: 50px;
+    color: #31160a;
+}
+h3{
+    font-size: 30px;
+    color: #31160a;
+}
+h4{
+    font-size: 20px;
+    text-align: center;
+}
+p{
+    text-align: justify;
+    font-size: 20px;
+}
+.p-equipe{
+    text-align: justify;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#form-contato{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+section{
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+#section-soulcode{
+    background-color: #17a2b8;
+}
+#section-equipe{
+    background-color: #ffc107;
+}
+#table-equipe{
+    width: 90%;
+}
+.td-equipe{
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+.img-equipe{
+    width: 80%;
+    border-radius: 50%;
+}
+table{
+    margin: 0 auto;
+}
+#section-contato1{
+    background-color: #17a2b8;
+}
+#section-contato2{
+    background-color: #ffc107;
+}
+#section-video{
+    background-color: #17a2b8;
+}
+#table-contato{
+    width: 90%;
+}
+.td-contato{
+    width: 50%;
+    vertical-align: top;
+}
+.input-text, select, textarea{
+    width: 70%;
+    border: 1px black solid;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 229, 145);
+    padding-left: 10px;
+}
+.anexo{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+textarea{
+    height: 180px;
+}
+legend{
+    font-size: 30px;
+    font-weight: bold;
+}
+.button-enviar{
+    background-color:white;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.button-inscricao{
+    background-color:white;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0px;
+    border: 2px solid black;
+    margin: 10px;
+}
+#mapa{
+width: 400px;
+height: 320px;
+border-radius: 5px;
+}
+#div-redes{
+    width: 100%;
+}
+.redes-sociais{
+    width: 5%;
+    margin: 30px;
+}
+footer{
+    padding: 20px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #17a2b8;
+    text-align: center;
+    height: 30px;
+}
+.div-footer{
+    height: 100%;
+    display: inline;
+}
+.info-footer{
+    vertical-align: top;
+}
+.icone{
+    height: 100%;
+    padding-right: 30px;
+}
+/* Páginas Cursos: */
+.section-curso{
+    background-color: #17a2b8;
+    font-size: 20px;
+}
+.aside ul li{
+    font-size: 20px;
+}
+#div-dp{
+    text-align: justify;
+}
+.infos-base li{
+    font-size: 18px;
+}
+.section-form{
+    background-color: #17a2b8;
+}
+fieldset{
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.td-form-cursos{
+    width: 50%;
+    vertical-align: top;
+}
+.voltar{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+.voltar a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #31160a;
+}
+.img-cursos{
+    width: 100%;
+}
+.td-index{
+    background-color: #ffdb11;
+}
+.div-index-img{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.index-img{
+    width: 100%;
+}
+td{
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+.botao-faca-ins{
+    text-align: center;
+}
+#section-inicio{
+    background-color: #17a2b8;
+}
+.patrocinadores{
+    height: 30px;
+    margin: 20px;
+}
+figcaption{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+#div-patrocinadores{
+    margin: 0 auto;
+    background-color: #17a2b8;
+    width: 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#section-patrocinadores{
+    margin: 0 auto;
+    background-color: white;
+    width: 70%;
+}
+ol{
+    font-size: 20px;
+}
+.infos-base li{
+    padding-top: 20px;
+}

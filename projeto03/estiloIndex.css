@@ -1,0 +1,459 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html{
+  font-size: 20px;
+}
+/*IMAGENS*/
+.botoes-imagem{
+  width: 20%;
+  text-align: center;
+}
+    img.on{
+      width: 4rem;
+    }
+    img.logo{
+      float:right;
+      width: 20%;
+    }
+    img.font{
+        width: 5rem;
+    }
+/*HEADER*/
+    .header {
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      font-family: 'Open Sans', sans-serif;            
+      width: 100%;
+      display: flex;
+      align-items: center;
+     justify-content: center;
+    }
+    
+    .header ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+    }
+    .header li a {
+      color: black;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+    .header div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      list-style: none;
+    }
+    .body {
+      background-color: white;
+      color: black;
+      font-size: 1.1em;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  /* CONTAINER */
+  .main-principal{
+    width: 95%;
+    margin: 0 auto;
+  }
+    h1{
+        font-size: 4rem;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+    }
+    p{
+      text-align: center;
+      font-size: 1rem;
+    }
+    h2{
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      text-align: center;
+    }
+    .text{
+      font-size: 2em;
+      font-family: 'Open Sans', sans-serif;  
+      margin-bottom: 2rem;              
+    }
+    p{
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;                
+    }
+
+    /* FUNDADORAS */
+    .fundadoraswhite{
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: repeat(5,1fr);
+    }
+    .fundadoraswhite div{
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .fundadorasblack{
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: repeat(5,1fr);
+    }
+    .fundadorasblack div{
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fundadorasblack div h3{
+      text-align: center;
+    }
+    .fundadorasblack div:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .fundadoraswhite div:hover {
+      box-shadow: 0 0 15px rgba(253, 230, 230, 0.822);
+    }
+    .fundadorasblack img {
+      width: 150px;
+    }
+    .fundadoraswhite img {
+      width: 150px;
+    }
+    .hidden{
+      text-align: center;
+      color: white;
+      font: bold;
+    }
+
+    /* FOOTER */
+    footer{
+      background: black;
+      box-shadow: 0 0 15px rgb(255, 255, 255);
+      color: #fff;
+      font-family: 'Arimo', sans-serif;
+      margin-top: 6rem;
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    /*---------------- ESTILIZAÇÃO CURRENCY --------------------*/
+    
+    #box1{
+      background-color: #aa425f;
+      border-radius: 0.300rem;
+      box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+      margin: 0 auto;
+      margin-top: 3rem;
+      padding: 1.25rem;
+      width: 83%;
+      
+  }
+
+  #textoconversor {
+      align-items: center;
+      font-size: 1.56em;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;                
+      margin: 0 auto;  
+      padding-top: 20px;
+      text-align: center;
+      width: 80%;
+  }
+
+  #textoconversor ul li {
+      list-style: none;
+      padding-top: 20px;
+  }
+
+  #h3currency{
+    background-color: #2c2b2b;
+    border: 0.200rem rgb(141, 139, 139) solid;
+    border-radius: 0.500rem;
+    box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  div ul{
+      padding-top: 10px ;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+  #paragrafocurrency{
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+
+  #h4currency{
+    font-size: 1.56em;
+    border-radius: 0.200rem;
+    background-color: #cc778f;
+    text-align: center;
+    margin-top: 10px;
+    padding: auto;
+  }
+
+  #tabelaconversao {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;                
+    font-weight: 600;
+    margin-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  #moedaorigem,
+  #moedadestino,
+  #valorDigitado {
+    margin: 1.25rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;                
+  }
+
+  #converter {
+      font-size: 2rem;
+      font-weight:600;
+      background-color: #2b2828;
+      color: aliceblue;
+      border-radius: 0.500rem;
+      box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+      padding: 0.5rem;
+  }
+
+  #mostraResultado {
+      text-align: center;
+      font-size: 1.56em;
+      margin: 0 auto;
+      margin: 1.5rem;
+      width: 95%;
+      font-size: 1.80rem;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;                
+  }
+    /* --------------- ESTILIZAÇÃO CALCULADORA ----------------- */
+
+    .paragrafo-calculadora{
+      font-size: 20px;
+    }
+    .div-escolha-calculadora{
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 auto;
+  }
+  .qual-calculadora{
+      height: 100px;
+      font-size: 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      cursor: pointer;
+  }
+  /* CSS Calculadora simples */
+  .calculadora-simples{
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: #aa425f;
+      display: none;
+      box-shadow: 0 0 1em black;
+  }
+  .numeros-escolhidos{
+      background: none;
+      box-shadow: inset 0px 0px 1.5em gray, 0px 0px 0.5em white;
+      border: 1px solid white;
+      width: 90%;
+      border-bottom: 2px solid white;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: right;
+      font-size: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      word-wrap: break-word;
+      word-break: break-all;
+      background-color: rgb(238, 236, 236);
+      margin: 20px;
+  }
+  .operacao-anterior{
+      color: rgba(0, 0, 0, 0.76);
+      font-size: 1.5rem;
+      height: 40px;
+  }
+  .operador{
+      height: 40px;
+  }
+  .numero-atual{
+      font-size: 2.5rem;
+      height: 55px;
+      overflow: hidden;
+  }
+  .botoes-calculadora{
+      padding: 20px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      /*Os dois anteriores podem ser resumidos com: 
+      grid-template: repeat(5, 1fr) / repeat(4, 1fr);*/
+      grid-gap: 15px;
+  }
+  .botao-calculadora{
+      border: none;
+      color: black;
+      border-radius: 5px;
+      font-size: 30px;
+      cursor: pointer;
+      height: 50px;
+      background-color: rgb(238, 236, 236);
+      box-shadow: 0 0 0.4em black;
+  }
+  .botao-calculadora:hover{
+      background-color: rgba(128, 128, 128, 0.479);
+      color: white;
+  }
+  .botao-limpar{
+      grid-column: span 3;
+  }
+  .botao-zero{
+      grid-column: span 3;
+  }
+  
+  /* CSS Calculadora científica */
+  .calculadora-cientifica{
+      width: 400px;
+      margin: 0 auto;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: #aa425f;
+      display: none;
+      box-shadow: 0 0 1em black;
+      margin-top: 50px
+  }
+  .numeros-escolhidos2{
+      background: none;
+      box-shadow: none;
+      border: none;
+      width: 88%;
+      border-bottom: 2px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: right;
+      font-size: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      word-wrap: break-word;
+      word-break: break-all;
+      background-color: rgb(211, 211, 211);
+      margin: 20px;
+  }
+  .operacao-anterior2{
+      color: rgba(0, 0, 0, 0.76);
+      font-size: 1.5rem;
+      height: 40px;
+  }
+  .operador2{
+      height: 40px;
+  }
+  .numero-atual2{
+      font-size: 2.5rem;
+      height: 55px;
+      overflow: hidden;
+  }
+  .botoes-calculadora2{
+      padding: 20px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+      /*Os dois anteriores podem ser resumidos com: 
+      grid-template: repeat(5, 1fr) / repeat(4, 1fr);*/
+      grid-gap: 10px;
+  }
+  .botao-limpar2{
+      grid-column: span 4;
+  }
+
+  /*------ ESTILIZAÇÃO CADASTRO ------------*/
+
+  /*centralizando o formulário*/
+.main-cadastro {
+  background-color: #aa425f;
+  border-radius: 10%;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family:'Open Sans', sans-serif;
+}
+  /*estilizando o formulário*/
+
+.form{
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.label-cadastro{
+  padding: 10px ;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.input-cadastro {
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px ;
+    width: 70%;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.sexo{
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px ;
+  width: 70%;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+.divBotao {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+.botao-cadastro{
+  font-size: 20px;
+  padding: 10px ;
+  width: 200px;
+};

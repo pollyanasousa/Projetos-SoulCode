@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*IMAGENS*/
+img.on{
+    width: 5rem;
+    height: 5rem;
+  }
+  img.logo{
+    float:right;
+    width: 25rem;
+    padding-left: 12rem;
+  }
+  img.font{
+      width: 5rem;
+      height: 5rem;
+  }
+
+/*HEADER*/
+  .header {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Open Sans', sans-serif;            
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+  .header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .header li a {
+    color: black;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+  .header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  h1{
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+  }
+body {
+    background-size: 100%;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/*centralizando o formulário*/
+main {
+    padding-top: 50px;
+    background-color: #aa425f;
+    border-radius: 10%;
+    margin: 0 auto;
+    padding-left: 20px;
+    width: 40%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family:'Open Sans', sans-serif;
+}
+
+/*estilizando o formulário*/
+label{
+  padding: 10px ;
+}
+input {
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px ;
+}
+
+#nome{
+    width: 65%;
+}
+
+.divBotao {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+button{
+  font-size: 20px;
+  padding: 10px ;
+  width: 200px;
+}
+.resultado {
+    word-break: break-all;
+}
+
+/* FOOTER */
+footer{
+    background: black;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    color: #fff;
+    font-family: 'Arimo', sans-serif;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+  }

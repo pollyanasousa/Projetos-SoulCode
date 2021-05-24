@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estiloIndex.css">
+        <meta name="description" content="Site interativo com JavaScript"/>
+        <meta name="author" content="Bruna Mazzaron, Bruna Prado, Erika ">
+        <!--LETRAS DO GOOGLE-->
+        <!--TEXTO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+        <!--TITULO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <!--FOOTER-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+        <title>Out𝄞ide - Cadastro</title>
+    </head>
+    <body id="body" class="body">
+        <header class="header">
+            <div class="botoes-imagem">
+              <img src="imgbruna/onwhite1.png" class="on" onclick="trocarDeTema()">
+              <img src="imgbruna/18.png" class="font" onclick="toUpper()">
+            </div>
+              <ul>
+                <li><a href="principal.html">Início</a></lu>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="cadastro.html" >Cadastro</a></li>
+                <li><a href="currency.html" >Conversor</a></li>
+              </ul>
+                <img class="logo" src="imgbruna/9.png">
+          </header> 
+        <section>
+            <h1>Cadastro</h1>
+        </section>
+        <main class="main-cadastro">
+            <section>
+                <h2>Cadastre-se abaixo!</h2>
+                <form name="form1" class="form">
+                    <div class="divNome">
+                        <label for="nome" class="label-cadastro">Nome Completo:</label><br/>
+                        <input type="text" id="nome" onblur="saiu(this)" class="nome input-cadastro" required>        
+                    </div>
+                    
+                    <div class="divCPF">
+                        <label for="ao_cpf" class="label-cadastro">CPF:</label><br/>
+                        <input type="text" name="ao_cpf" id="ao_cpf" maxlength="14" onblur="validaCPF()" class="cpf input-cadastro" required>        
+                    </div>
+
+                    <div class="divData">
+                        <label for="data" class="label-cadastro">Data de Nascimento:</label><br/>
+                        <input type="date" id="data" min="1890-01-01" class="data input-cadastro" required>        
+                    </div>
+
+                    <div class="divEmail">
+                        <label for="email" class="label-cadastro">E-mail:</label><br/>
+                        <input type="email" id="email" class="email input-cadastro" onblur="validaEmail()" required>        
+                    </div>
+
+                    <div class="divSexo">
+                        <label for="sexo" class="label-cadastro">Sexo:</label><br/>
+                        <select name="sexo" id="sexo" class="sexo">
+                            <option value=""></option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Não informar">Não informar</option>
+                        </select>       
+                    </div>
+
+                    <div class="divBotao">
+                        <button type="submit" class="botao-cadastro">Enviar</button>
+                    </div>
+
+                    <div class="resultado">
+                        
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div>Broadway
+              New York, NY, EUA </div>
+            <div>&copy;Out𝄞ide 2021</div>     
+        </footer>
+
+        <script src="js.js"></script>
+    </body>
+</html>

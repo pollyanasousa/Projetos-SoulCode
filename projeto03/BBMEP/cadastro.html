@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cadastro.css">
+        <meta name="description" content="Site interativo com JavaScript"/>
+        <meta name="author" content="Bruna Mazzaron, Bruna Prado, Erika ">
+        <!--LETRAS DO GOOGLE-->
+        <!--TEXTO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+        <!--TITULO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <!--FOOTER-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+        <title>Cadastro</title>
+    </head>
+    <body id="body" class="body">
+        <header class="header">
+            <div>
+                <img src="imgbruna/onwhite1.png" class="on" onclick="trocarDeTema()">
+                <img src="imgbruna/18.png" class="font" onclick="toUpper()">
+              </div>
+                <ul>
+                  <li><a href="principal.html">Principal</a></lu>
+                  <li><a href="calculadora.html" >Calculadora</a></li>
+                  <li><a href="cadastro.html">Cadastro</a></li>
+                  <li><a href="currency.html">Currency</a></li>
+                </ul>
+                  <img class="logo" src="imgbruna/9.png">
+        </header>
+        <section>
+            <h1> Cadastro </h1>
+        </section>
+        <main>
+            <section>
+                <form name="form1" class="form">
+                    <h2>Cadastre-se abaixo!</h2>
+                    <div class="divNome">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" onblur="saiu(this)" class="nome" required>        
+                    </div>
+                    
+                    <div class="divCPF">
+                        <label for="ao_cpf">CPF:</label>
+                        <input type="text" name="ao_cpf" id="ao_cpf" maxlength="14" onblur="validaCPF()" class="cpf" required>        
+                    </div>
+
+                    <div class="divData">
+                        <label for="data">Data de Nascimento:</label>
+                        <input type="date" id="data" min="1890-01-01" class="data" required>        
+                    </div>
+
+                    <div class="divEmail">
+                        <label for="">E-mail:</label>
+                        <input type="email" id="email" class="email" onblur="validaEmail()" required>        
+                    </div>
+
+                    <div class="divSexo">
+                        <label for="sexo">Sexo:</label>
+                        <select name="sexo" id="sexo" class="sexo">
+                            <option value=""></option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Não informar">Não informar</option>
+                        </select>       
+                    </div>
+
+                    <div class="divBotao">
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                    <div class="resultado">
+                        
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Broadway
+            New York, NY, EUA 
+        </footer>
+
+        <script src="cadastro.js"></script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding: 0;
+}
+/* @media only screen and (max-width: 768px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+} */
+
+body{
+    background-color: #e6e6e6;
+}
+#topo{
+    width: 100%;
+    margin-top: 200px;
+    
+    
+}
+#logo{
+    width: 150px;
+    background-color: blanchedalmond;
+    opacity: -10px;
+    border-radius: 5px;
+    box-shadow: #ddb568 -9px 10px 12px;
+}
+
+svg{
+    color: #ddb568;
+    
+}
+p{
+    color:#0b446d;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#navbarSite{
+    font-weight: bold;
+    text-align: center;
+    font-weight: bold;
+    background-color:#ddb568 ;
+}
+#botao{
+    background-color: #0b446d;
+    color: whitesmoke;
+}
+#botao:hover{
+    color:#0b446d;
+    background-color:whitesmoke;
+    font-weight: bold;
+}
+li a {
+    font-size: 20px;
+    font-weight: bold;
+}
+li a:hover{
+    color:#fff;
+    background-color:#ddb568;
+    font-weight: bold;
+}
+.card{
+    color: white;
+    background-color:#0b446d ;
+  
+}
+.card-body:hover{
+    color:#0b446d;
+    background-color:white;
+    font-weight: bold;
+    
+}
+h3{
+    color: #0b446d;
+    text-align: center;
+    margin-top: 60px;
+}
+footer {
+    width: 100%;
+    margin: 200px;
+    background-color: #b5c5d1;
+    font-family: Arial,sans-serif;
+    margin-bottom: 0%;
+}
+#foot{
+    float: left;
+    border-radius: 5px;
+    font-family: Arial,sans-serif;
+    margin-left: 30px;
+}
+#ultimo{
+    margin-left:400px;
+    color: white;
+}
+
+

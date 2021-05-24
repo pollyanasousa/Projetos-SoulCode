@@ -1,0 +1,382 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*IMAGENS*/
+    img.on{
+      width: 5rem;
+      height: 5rem;
+    }
+    img.logo{
+      float:right;
+      width: 25rem;
+      padding-left: 12rem;
+    }
+    img.font{
+        width: 5rem;
+        height: 5rem;
+    }
+/*HEADER*/
+    .header {
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      font-family: 'Open Sans', sans-serif;            
+      width: 100%;
+      display: flex;
+      align-items: center;
+     justify-content: center;
+    }
+    
+    .header ul{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .header li a {
+      color: black;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+    .header div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      list-style: none;
+    }
+    .body {
+      background-color: white;
+      color: black;
+      font-size: 1.1em;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  /* CONTAINER */
+    h1{
+        font-size: 5em;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+    }
+    p{
+      text-align: center;
+    }
+    h2{
+      margin-top: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      text-align: center;
+    }
+    .text{
+      font-size: 2em;
+      font-family: 'Open Sans', sans-serif;                
+    }
+    p{
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;                
+    }
+
+    /* FUNDADORAS */
+    .fundadoraswhite{
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: repeat(5,1fr);
+    }
+    .fundadoraswhite div{
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fundadorasblack{
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: repeat(5,1fr);
+    }
+    .fundadorasblack div{
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fundadorasblack div:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .fundadoraswhite div:hover {
+      box-shadow: 0 0 15px rgba(253, 230, 230, 0.822);
+    }
+    .fundadorasblack img {
+      width: 150px;
+    }
+    .fundadoraswhite img {
+      width: 150px;
+    }
+
+    /* FOOTER */
+    footer{
+      background: black;
+      box-shadow: 0 0 15px rgb(255, 255, 255);
+      color: #fff;
+      font-family: 'Arimo', sans-serif;
+      margin-top: 10rem;
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+    }
+    /*---------------- ESTILIZAÇÃO CURRENCY --------------------*/
+    
+    #box1{
+      background-color: #aa425f;
+      border-radius: 0.300rem;
+      box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+      margin: 0 auto;
+      margin-top: 3rem;
+      padding: 1.25rem;
+      width: 80%;
+      height: 40rem;
+  }
+
+  #textoconversor {
+      align-items: center;
+      font-size: 1.56em;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;  
+      margin: 0 auto;  
+      padding-top: 20px;
+      text-align: center;
+      width: 80%;
+  }
+
+  #textoconversor ul li {
+      list-style: none;
+      padding-top: 20px;
+  }
+
+  #h1currency{
+    background-color: #2c2b2b;
+    border: 0.200rem rgb(141, 139, 139) solid;
+    border-radius: 0.500rem;
+    box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+    color: aliceblue;
+    font-size: 2.50em;
+    margin: auto;
+    width: 30%;
+  }
+
+  div ul{
+      padding-top: 10px ;
+      text-align: center;
+      font-size: 1.56em;
+    }
+
+  #paragrafocurrency{
+      font-size: 1.56em;
+      margin-top: 10px;
+  }
+
+  #h4currency{
+    font-size: 1.56em;
+    border-radius: 0.200rem;
+    background-color: #cc778f;
+    text-align: center;
+    margin-top: 10px;
+    padding: auto;
+  }
+
+  #tabelaconversao {
+    font-size: 1.56em;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 600;
+      margin-top: 10px;
+      margin: 0 auto;
+      text-align: center;
+      width: 80%;
+  }
+
+  #moedaorigem,
+  #moedadestino,
+  #valorDigitado {
+      margin: 1.25rem;
+      width: 15%;
+      height: 2.5rem;
+      font-size: 0.6em;
+      font-family: 'Arimo', sans-serif;
+  }
+
+  #converter {
+      font-size: 1.2em;
+      font-weight:600;
+      background-color: #2b2828;
+      color: aliceblue;
+      border-radius: 0.500rem;
+      box-shadow: #363435 0.150rem 0.150rem 0.150rem;
+  }
+
+  #mostraResultado {
+      text-align: center;
+      font-size: 1.56em;
+      margin: 0 auto;
+      margin-top: 1.25rem;
+      width: 80%;
+      font-size: 1.80rem;
+      font-family: 'Arimo', sans-serif;
+  }
+    /* --------------- ESTILIZAÇÃO CALCULADORA ----------------- */
+
+    .paragrafo-calculadora{
+      font-size: 20px;
+    }
+    .div-escolha-calculadora{
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 auto;
+  }
+  .qual-calculadora{
+      height: 100px;
+      font-size: 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      cursor: pointer;
+  }
+  /* CSS Calculadora simples */
+  .calculadora-simples{
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: #aa425f;
+      display: none;
+      box-shadow: 0 0 1em black;
+  }
+  .numeros-escolhidos{
+      background: none;
+      box-shadow: inset 0px 0px 1.5em gray, 0px 0px 0.5em white;
+      border: 1px solid white;
+      width: 90%;
+      border-bottom: 2px solid white;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: right;
+      font-size: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      word-wrap: break-word;
+      word-break: break-all;
+      background-color: rgb(238, 236, 236);
+      margin: 20px;
+  }
+  .operacao-anterior{
+      color: rgba(0, 0, 0, 0.76);
+      font-size: 1.5rem;
+      height: 50px;
+  }
+  .operador{
+      height: 50px;
+  }
+  .numero-atual{
+      font-size: 2.5rem;
+      height: 50px;
+      overflow: hidden;
+  }
+  .botoes-calculadora{
+      padding: 20px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      /*Os dois anteriores podem ser resumidos com: 
+      grid-template: repeat(5, 1fr) / repeat(4, 1fr);*/
+      grid-gap: 15px;
+  }
+  .botao-calculadora{
+      border: none;
+      color: black;
+      border-radius: 5px;
+      font-size: 30px;
+      cursor: pointer;
+      height: 50px;
+      background-color: rgb(238, 236, 236);
+      box-shadow: 0 0 0.4em black;
+  }
+  .botao-calculadora:hover{
+      background-color: rgba(128, 128, 128, 0.479);
+      color: white;
+  }
+  .botao-limpar{
+      grid-column: span 3;
+  }
+  .botao-zero{
+      grid-column: span 3;
+  }
+  
+  /* CSS Calculadora científica */
+  .calculadora-cientifica{
+      width: 400px;
+      margin: 0 auto;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: #aa425f;
+      display: none;
+      box-shadow: 0 0 1em black;
+      margin-top: 50px
+  }
+  .numeros-escolhidos2{
+      background: none;
+      box-shadow: none;
+      border: none;
+      width: 88%;
+      border-bottom: 2px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: right;
+      font-size: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      word-wrap: break-word;
+      word-break: break-all;
+      background-color: rgb(211, 211, 211);
+      margin: 20px;
+  }
+  .operacao-anterior2{
+      color: rgba(0, 0, 0, 0.76);
+      font-size: 1.5rem;
+      height: 50px;
+  }
+  .operador2{
+      height: 50px;
+  }
+  .numero-atual2{
+      font-size: 2.5rem;
+      height: 50px;
+      overflow: hidden;
+  }
+  .botoes-calculadora2{
+      padding: 20px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+      /*Os dois anteriores podem ser resumidos com: 
+      grid-template: repeat(5, 1fr) / repeat(4, 1fr);*/
+      grid-gap: 10px;
+  }
+  .botao-limpar2{
+      grid-column: span 4;
+  }

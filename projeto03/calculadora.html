@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site interativo com JavaScript"/>
+    <meta name="author" content="Bruna Mazzaron, Bruna Prado, Erika ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--LETRAS DO GOOGLE-->
+    <!--TEXTO-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!--TITULO-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!--FOOTER-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloIndex.css">
+    <script src="js.js"></script>
+    <title>Out𝄞ide - Calculadora</title>
+</head>
+<body class="body">
+    <header>
+        <header class="header">
+            <div class="botoes-imagem">
+              <img src="imgbruna/onwhite1.png" class="on" onclick="trocarDeTema()">
+              <img src="imgbruna/18.png" class="font" onclick="toUpper()">
+            </div>
+              <ul>
+                <li><a href="principal.html">Início</a></lu>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="cadastro.html" >Cadastro</a></li>
+                <li><a href="currency.html" >Conversor</a></li>
+              </ul>
+                <img class="logo" src="imgbruna/9.png">
+          </header>  
+    </header>
+    <main>
+        <h1>Calculadora</h1>
+        <p class="paragrafo-calculadora">Precisa de ajuda para calcular o valor do seu apoio? Utilize uma de nossas calculadoras exclusivas!</p>
+        <div class="div-escolha-calculadora">
+            <button class="qual-calculadora" onclick="aparecerSimples()">Calculadora<br/>Simples</button>
+            <button class="qual-calculadora" onclick="aparecerCientifica()">Calculadora<br/>Científica</button>
+        </div>
+
+        <!--Calculadora Simples: -->
+        <div class="calculadora-simples">
+            <div class="numeros-escolhidos">
+                <div class="operacao-anterior"></div>
+                <div class="operador"></div>
+                <div class="numero-atual"></div>
+            </div>
+            <div class="botoes-calculadora">
+                <button class="botao-calculadora botao-limpar" onclick="limpar()">Limpar</button>
+                <button class="botao-calculadora operando" onclick="criarOperador(this)" value="/">/</button>
+
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="7">7</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="8">8</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="9">9</button>
+                <button class="botao-calculadora operando" value="*" onclick="criarOperador(this)">*</button>
+
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="4">4</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="5">5</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="6">6</button>
+                <button class="botao-calculadora operando" value="-" onclick="criarOperador(this)">-</button>
+
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="1">1</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="2">2</button>
+                <button class="botao-calculadora numero" onclick="pegarNumero(this)" value="3">3</button>
+                <button class="botao-calculadora operando" value="+" onclick="criarOperador(this)">+</button>
+                
+                <button class="botao-calculadora botao-zero numero" onclick="pegarNumero(this)" value="0">0</button>
+                <button class="botao-calculadora igual" onclick="mostrarResultado()">=</button>
+            </div>
+        </div>
+
+        <!--Calculadora Científica: -->
+        <div class="calculadora-cientifica">
+            <div class="numeros-escolhidos">
+                <div class="operacao-anterior2"></div>
+                <div class="operador2"></div>
+                <div class="numero-atual2"></div>
+            </div>
+            <div class="botoes-calculadora2">
+                <button class="botao-calculadora botao-limpar2" onclick="limpar2()">Limpar</button>
+                <button class="botao-calculadora" onclick="criarOperador2(this)" value="/">/</button>
+
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="3.14159265359">π</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="7">7</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="8">8</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="9">9</button>
+                <button class="botao-calculadora" value="*" onclick="criarOperador2(this)">*</button>
+
+                <button class="botao-calculadora" onclick="elevarPotencia(this)" value="x²">x²</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="4">4</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="5">5</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="6">6</button>
+                <button class="botao-calculadora" value="-" onclick="criarOperador2(this)">-</button>
+
+                <button class="botao-calculadora" onclick="elevarPotencia(this)" value="x³">x³</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="1">1</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="2">2</button>
+                <button class="botao-calculadora" onclick="pegarNumero2(this)" value="3">3</button>
+                <button class="botao-calculadora" value="+" onclick="criarOperador2(this)">+</button>
+                
+                <button class="botao-calculadora" onclick="elevarPotencia(this)" value="√">√</button>
+                <button class="botao-calculadora botao-zero" onclick="pegarNumero2(this)" value="0">0</button>
+                <button class="botao-calculadora igual" onclick="mostrarResultado2()">=</button>
+            </div>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <div>Broadway
+          New York, NY, EUA </div>
+        <div>&copy;Out𝄞ide 2021</div>     
+      </footer>
+    <script src="js.js"></script>
+</body>
+</html>

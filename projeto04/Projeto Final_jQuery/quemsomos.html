@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem somos</title>
+    <link rel="stylesheet" href="API's/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="API's/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="API's/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/CSS" href="css/style.css">
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Fase COVID</a></li>
+                <li><a href="cadastro.html">Vacinação</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><input type="button" id="btn3" value="Acessibilidade" onclick="acessivel1()"></li>
+                <li id="dia"></li>
+                <li id="hora"></li>
+
+                <script>
+                    //Dia
+                    var d = new Date();
+                    var data = d.getDate();
+                    var hora = d.getHours();
+                    var mes = d.getMonth();
+                    var ano = d.getFullYear();
+                    // <li id="dia"></li>
+                    document.getElementById("dia").innerHTML = data + "/" + mes + "/" + ano;
+                    //Hora
+                    var hora = d.getHours();
+                    var minutos = d.getMinutes();
+                    document.getElementById("hora").innerHTML = hora + ":" + minutos;
+                </script>
+            </ul>
+        </nav>
+    </header>
+    <!-- a. Espaço genérico onde seja possível incluir informações do cliente final.-->
+    <main id="site">
+        <section id="cliente_final">
+            <article>
+                <h2>Cliente </h2>
+                <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor impedit voluptas nostrum
+                    ad magni in ea aspernatur porro consectetur, minus recusandae laudantium facere sunt illum cum,
+                    earum delectus hic.</p>
+                <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor impedit voluptas nostrum
+                    ad magni in ea aspernatur porro consectetur, minus recusandae laudantium facere sunt illum cum,
+                    earum delectus hic.</p>
+                <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor impedit voluptas nostrum
+                    ad magni in ea aspernatur porro consectetur, minus recusandae laudantium facere sunt illum cum,
+                    earum delectus hic.</p>
+                <div>
+                    <img id="bannerPrinc" src="img/banner.jpeg">
+                </div>
+            </article>
+        </section>
+        <!-- b. Espaço aos desenvolvedores da pagina podendo conter informações de cada desenvolvedor
+     e/ou empresa desenvolvedora.-->
+        <h2>Desenvolvedoras</h2>
+        <section id="equipe">
+            <div id="fernanda">
+                <img src="img/Fernanda.jpeg">
+                <h3>Fernanda Moura<h3>
+            </div>
+            <div id="helena">
+                <img src="img/helena.jpg">
+                <h3>Helena Dittert<h3>
+            </div>
+            <div id="monique">
+                <img src="img/monique.jpg">
+                <h3>Monique Beco<h3>
+            </div>
+            <div id="pollyana">
+                <img src="img/pollyana.jpeg">
+                <h3>Pollyana Sousa<h3>
+            </div>
+            <div id="rafaela">
+                <img src="img/rafaela.jpeg">
+                <h3>Rafaela de Almeida<h3>
+            </div>
+        </section>
+        <div id="faixa"></div>
+    </main>
+    <footer id="footerqs">
+        <p><b>Fernanda | Helena | Monique | Pollyana | Rafaela | &copy; 2021 </b></p>
+
+    </footer>
+</body>

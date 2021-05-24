@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloIndex.css">
+    <script src="js.js"></script>
+        <!--LETRAS DO GOOGLE-->
+        <!--TEXTO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <!--TITULO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <!--FOOTER-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estiloIndex.css">
+        <script src="js.js"></script>
+    <title>Out𝄞ide - Conversor</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="botoes-imagem">
+          <img src="imgbruna/onwhite1.png" class="on" onclick="trocarDeTema()">
+          <img src="imgbruna/18.png" class="font" onclick="toUpper()">
+        </div>
+          <ul>
+            <li><a href="principal.html">Início</a></lu>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="cadastro.html" >Cadastro</a></li>
+            <li><a href="currency.html" >Conversor</a></li>
+          </ul>
+            <img class="logo" src="imgbruna/9.png">
+      </header> 
+
+      <section>
+          <h1>Conversor de Moedas</h1>
+      </section>
+    <main>
+        <section id="box1" class="aumentarFonte">
+            <section>
+                <div>
+                    <h3 id="h3currency">Conversor</h3>
+                    <h4 id="h4currency">" As histórias são a conversão criativa da própria vida em uma experiência mais poderosa,mas clara e mais significativa.Elas são a moeda do contato humano."   Robert Mackee</h4>
+                   
+                    <p id="paragrafocurrency">Que tal converter suas intenções em doações?<br>Realize a conversão de moeda.<br>
+                        Lembrando que :</p>
+                    <ul>
+                        <li>*Coloque apenas valores numéricos.</li>
+                        <li>*A moeda de origem precisa ser diferente da moeda a ser convertida.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="tabelaconversao">
+                <label for="valor">Valor a converter:</label>
+                <input type="text" size="30" id="valorDigitado">
+                <select name="moedaorigem" id="moedaorigem">
+                    <option value="1">Real Brasileiro</option>
+                    <option value="5.47">Dolar Americano</option>
+                    <option value="4.39">Dolar Canadense</option>
+                    <option value="6.62">Euro</option>
+                    <option value="7.58">Libra Esterlina</option>
+                    <option value="0.058">Peso argentino</option>
+                </select>
+                <select id="moedadestino">
+                    <option value="1" nome="real brasileiro">Real Brasileiro</option>
+                    <option value="5.47" nome="dolar">Dolar Americano</option>
+                    <option value="4.39" nome="dolar can">Dolar Canadense</option>
+                    <option value="6.62" nome="euro">Euro</option>
+                    <option value="7.58" nome="libra">Libra Esterlina</option>
+                    <option value="0.058" nome="peso">Peso argentino</option>
+                </select>
+                <div>
+                    <div id="mostraResultado">
+
+                    </div>
+                    <button type="button" id="converter" onclick="converter()">Conversão</button>
+                </div>
+            </section>
+        </section>    
+    </main>
+    <footer>
+        <div>Broadway
+          New York, NY, EUA </div>
+        <div>&copy;Out𝄞ide 2021</div>     
+      </footer>
+</body>
+
+</html>

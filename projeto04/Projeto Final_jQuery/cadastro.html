@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <!-- Biblioteca -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="API's/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="API's/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="API's/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <!--  -->
+    <link rel="icon" href="img/icon.png">
+    <script src="js/cadastro.js"></script>
+    <script src="js/imc.js"></script>
+    <link rel="stylesheet" href="css/cadastro.css">
+
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header id="botoes">
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fase.html">Fase COVID</a></li>
+                <li><a href="cadastro.html">Vacinação</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><input id="btn1" type="button" value="Acessibilidade" onclick="acessivel()"></li>
+                <li id="dia"></li>
+                <li id="hora"></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        //Dia
+        var d = new Date();
+        var data = d.getDate();
+        var hora = d.getHours();
+        var mes = d.getMonth();
+        var ano = d.getFullYear();
+        // <li id="dia"></li>
+        document.getElementById("dia").innerHTML = data + "/" + mes + "/" + ano;
+        //Hora
+        var hora = d.getHours();
+        var minutos = d.getMinutes();
+        document.getElementById("hora").innerHTML = hora + ":" + minutos;
+    </script>
+    <div id="main">
+        <script>
+            //MENU, ACESSIBILIDADE
+            var y = 0
+
+            function acessivel() {
+                if (y == 0) {
+                    document.getElementById("main").style.fontSize = "180%";
+                    $("input").css("font-size", "180%");
+                    $("select").css("font-size", "180%");
+                    $("select").css("height", "180%");
+                    $("select").css("width", "110%");
+                    y = 1;
+                } else if (y == 1) {
+                    document.getElementById("main").style.fontSize = "100%";
+                    $("input").css("font-size", "100%");
+                    $("select").css("font-size", "100%");
+                    $("select").css("height", "100%");
+                    $("select").css("width", "100%");
+                    y = 0;
+                }
+            }
+        </script>
+        <script>
+            //Pegar elemento e mexer com ele (Droppable)
+            //Boneca
+            $(function () {
+                $("#boneca").draggable();
+                $("#boneca").droppable({
+                    drop: function (event, ui) {
+                        $(this)
+                            .addClass("ui-state-highlight")
+                            .find("h1");
+                    }
+                });
+            });
+            //Boneco
+            $(function () {
+                $("#boneco").draggable();
+                $("#boneco").droppable({
+                    drop: function (event, ui) {
+                        $(this)
+                            .addClass("ui-state-highlight")
+                            .find("h1");
+                    }
+                });
+            });
+        </script>
+        </head>
+        <div id=imagem>
+            <img src="img/banner2.jpeg" alt="">
+        </div>
+        <div id="bonecos">
+            <img id="boneca" src="img/feminino.png" alt="" style="display: none;">
+            <img id="boneco" src="img/masculino.png" alt="" style="display: none;">
+        </div>
+
+        <h1>Formulário de cadastro</h1>
+        <div id="form">
+            <table>
+                <tr>
+                    <td><label for="nome">Nome Completo:</label></td>
+                    <td> <input class="progress" type="text" name="nome" id="nome"></td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF:</label></td>
+                    <td><input class="progress" type="text" name="cpf" id="cpf" maxlength="14" placeholder="12345678910"
+                            onblur="VerificaCPF()"></td>
+                </tr>
+                <tr id="sus">
+                    <td><label for="sus">Cartão SUS:</label></td>
+                    <td><input class="progress" placeholder="" type="text" min="0" max="15"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dataNasc">Data de Nascimento:</label>
+                    </td>
+                    <td>
+                        <input class="progress" type="number" min="1" max="31" name="diaNasc" id="diaNasc"
+                            placeholder="Dia">
+                        <select class="progress" name="mes" id="mesNasc">
+                            <option value="" selected>Mês</option>
+                            <option value="1">JANEIRO</option>
+                            <option value="2">FEVEREIRO</option>
+                            <option value="3">MARÇO</option>
+                            <option value="4">ABRIL</option>
+                            <option value="5">MAIO</option>
+                            <option value="6">JUNHO</option>
+                            <option value="7">JULHO</option>
+                            <option value="8">AGOSTO</option>
+                            <option value="9">SETEMBRO</option>
+                            <option value="10">OUTUBRO</option>
+                            <option value="11">NOVEMBRO</option>
+                            <option value="12">DEZEMBRO</option>
+                        </select>
+                        <input class="progress" type="number" min="1891" max="2021" name="anoNasc" id="anoNasc"
+                            placeholder="Ano" onblur="idade(this)">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> <label for="sexo">Sexo:</label></td>
+                    <td>
+                        <select name="sexo" type="select" id="sexo" onblur="validaSexo(this)">
+                            <option class="progress" selected>Selecione</option>
+                            <option id="feminino" value="feminino">Feminino</option>
+                            <option id="masculino" value="masculino">Masculino</option>
+                        </select>
+                        <div id="gestante">
+                            Gestante:
+                            <label for="sim">Sim</label>
+                            <input type="radio" id="sim" name="gestante" value="sim">
+                            <label for="nao">Não</label>
+                            <input type="radio" id="nao" name="gestante" value="nao">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="etnia">Etnia</label>
+                    </td>
+                    <td>
+                        <select class="progress" name="etnia" id="etnia">
+                            <option value="">Não informado</option>
+                            <option value="branco">Branco</option>
+                            <option value="preto">Preto</option>
+                            <option value="pardo">Pardo</option>
+                            <option value="amarelo">Amarelo</option>
+                            <option value="indigena">Indígena</option>
+                            <option value="quilombola">Quilombola</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="comorbidade">
+                    <td class="comorbidade">
+                        Comorbidades:
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="diabetes">
+                        <label for="diabetes">Diabetes</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="hipertensao">
+                        <label for="hipertensao">Hipertensão</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="asma">
+                        <label for="asma">Asma</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="tuberculose">
+                        <label for="tuberculose">Tuberculose</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="pneumonia">
+                        <label for="pneumonia">Pneumonia</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="insuficienciaCardiaca">
+                        <label for="insuficienciaCardiaca">Insuficiencia Cardíaca</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="obesidadeMorbida">
+                        <label for="obesidadeMorbida"> Obesidade Mórbida</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="comorbiVacina" id="comorbiVacina1" onClick="soma()"
+                            class="comorbidades" name="imunosSuprimido">
+                        <label for="imunosSuprimido"> Imunossuprimido</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="comorbiVacina" class="comorbidades" onClick="soma()"
+                            name="sindromeDown">
+                        <label for="sindromeDown"> Sindrome Down</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="cirroseHepatica">
+                        <label for="cirroseHepatica"> Cirrose Hepatica </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="cerebro">
+                        <label for="cerebro"> Doença Cérebro Vascular</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="comorbiVacina" class="comorbidades" onClick="soma()" name="renal">
+                        <label for="renal"> Doença Renal em Diálise </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="comorbidades" name="anemia">
+                        <label for="anemia"> Anemia Falciforme</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vacinas">Vacinas:</label>
+                    </td>
+                    <!-- VACINA COM CAIXA DE SELEÇAO - item 5, b -->
+                    <td>
+                        <select class="progress" name="vacinas" id="vacinas" multiple>
+                            <option value="polio">Anti-Pólio</option>
+                            <option value="dtp">DTP</option>
+                            <option value="bcg">BCG</option>
+                            <option value="sarampo">Anti-Sarampo</option>
+                            <option value="difTet">Anti-Difteria e Tétano</option>
+                            <option value="triplice">Tríplice Viral</option>
+                            <option value="hepatiteB">Heptatite B</option>
+                            <option value="febreAmarela">Febre amarela</option>
+                            <option value="h1n1">H1N1</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="peso">Peso:</label>
+                    </td>
+                    <td>
+                        <input class="progress" type="text" id="peso" min="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="altura">Altura:</label>
+                    </td>
+                    <td>
+                        <input onblur="calculaIMC()" class="progress" type="text" id="altura">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="imc"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="ui-widget">
+                            <label for="tags">Profissão: </label>
+                    </td>
+                    <td>
+                        <input class="progress" id="tags">
+        </div>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <progress id='progress' max='100' value='0'></progress>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="campo">
+                <div>
+                    <button id="envia" type="submit" class="botao" onclick="mensagemFim()">Enviar</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <!-- mensagem no final do cadastro -->
+            <td colspan="2">
+                <div id="msg"></div>
+            </td>
+        </tr>
+        </table>
+    </div>
+    <footer>
+        <p><b>Fernanda | Helena | Monique | Pollyana | Rafaela | &copy; 2021 </b></p>
+    </footer>
+
+    <script src="js/efeitos.js"></script>
+    <script>
+        $(function () {
+
+            var $progress = $('#progress'), // Barra de Progresso.
+                $progressElements = $('.progress'), // Elementos que devem ser checados
+                // para modificar o valor da barra.
+                TOTAL = $progressElements.length; // Total de elementos.
+
+
+            $progressElements.on('blur, change', function () {
+
+                // Faz um filtro com o total elementos válidos.
+                // Nesse caso, campos que não estejam "em branco" e que não estejam marcados
+                // como ':invalid'.
+                var valid = $progressElements.filter(function () {
+                    return ($(this).val() || $(this).prop('checked')) && !$(this).is(
+                        ':invalid');
+                }).length;
+
+                // Calcula a porcentagem e altera o valor da barra.
+                console.log(valid)
+                var percent = (valid * 100) / TOTAL,
+                    current = $progress.val();
+
+                var increase = percent > current;
+
+                var transition = setInterval(function () {
+                    if ((increase && current >= percent) ||
+                        (!increase && current <= percent))
+                        clearInterval(transition);
+
+                    var value = $progress.val();
+                    value = increase ? value + 1 : value - 1;
+                    current = value;
+
+                    $progress.val(current);
+                }, 10);
+            });
+        });
+    </script>
+</body>
+
+</html>

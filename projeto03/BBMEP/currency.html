@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloIndex.css">
+    <script src="js.js"></script>
+        <!--LETRAS DO GOOGLE-->
+        <!--TEXTO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <!--TITULO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <!--FOOTER-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estiloIndex.css">
+        <script src="js.js"></script>
+    <title>Currency</title>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+          <img src="imgbruna/onwhite1.png" class="on" onclick="trocarDeTema()">
+          <img src="imgbruna/18.png" class="font" onclick="toUpper()">
+        </div>
+          <ul>
+            <li><a href="principal.html">Principal</a></lu>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="currency.html">Currency</a></li>
+          </ul>
+            <img class="logo" src="imgbruna/9.png">
+      </header>
+
+      <section>
+          <h2>Conversor de Moedas</h2>
+      </section>
+    <main>
+        <section id="box1" class="aumentarFonte">
+            <section>
+                <div>
+                    <h1 id="h1currency">Conversor</h1>
+                    <h4 id="h4currency">" As histórias são a conversão criativa da própria vida em uma experiência mais poderosa,mas clara e mais significativa.Elas são a moeda do contato humano."   Robert Mackee</h4>
+                   
+                    <p id="paragrafocurrency">Que tal converter suas intenções em doações?<br>Realize a conversão de moeda.<br>
+                        Lembrando que :</p>
+                    <ul>
+                        <li>*Coloque apenas valores numéricos.</li>
+                        <li>*A moeda de origem precisa ser diferente da moeda a ser convertida.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="tabelaconversao">
+                <label for="valor">Valor a converter:</label>
+                <input type="text" size="30" id="valorDigitado">
+                <select name="moedaorigem" id="moedaorigem">
+                    <option value="1">Real Brasileiro</option>
+                    <option value="5.47">Dolar Americano</option>
+                    <option value="4.39">Dolar Canadense</option>
+                    <option value="6.62">Euro</option>
+                    <option value="7.58">Libra Esterlina</option>
+                    <option value="0.058">Peso argentino</option>
+                </select>
+                <select id="moedadestino">
+                    <option value="1" nome="real brasileiro">Real Brasileiro</option>
+                    <option value="5.47" nome="dolar">Dolar Americano</option>
+                    <option value="4.39" nome="dolar can">Dolar Canadense</option>
+                    <option value="6.62" nome="euro">Euro</option>
+                    <option value="7.58" nome="libra">Libra Esterlina</option>
+                    <option value="0.058" nome="peso">Peso argentino</option>
+                </select>
+                <div>
+                    <button type="button" id="converter" onclick="converter()">Conversão</button>
+                    <script>
+                        //conversor de moeda
+                        function converter() {
+
+                            valor = document.getElementById("valorDigitado").value;
+
+                            //validação, não letra e não numero menor que 0
+                            if (isNaN(valor) || valor < 0 || valor == "") {
+                                alert("Valor inválido");
+                            }
+                            var valordigi = parseFloat(valor);
+
+
+                        //variaveis recebem valor
+                            var moeda1 = document.getElementById("moedaorigem").value;
+                            var moeda2 = document.getElementById("moedadestino").value;
+                            
+
+                            //validar moedas , é preciso escolher
+
+                            if (moeda1 == '0' || moeda2 == '0') {
+                                alert("Escolha um moeda ");
+                            }
+
+                            //as duas não podem ser iguais
+
+                            if (moeda1 == moeda2) {
+                                alert("Escolha moedas diferentes");
+                            }
+
+                            //calculo da conversão
+
+                            let conversao = (valordigi * moeda1) / moeda2;
+                           
+
+                            //imprime na tela
+                           
+                            document.getElementById("mostraResultado").innerHTML = "O valor convertido fica em : " + " " + conversao.toFixed(2);
+
+
+                        }
+                    </script>
+                </div>
+            </section>
+            <div id="mostraResultado">
+
+            </div>
+        </section>    
+    </main>
+    <footer>
+        Broadway
+        New York, NY, EUA      
+      </footer>
+</body>
+
+</html>

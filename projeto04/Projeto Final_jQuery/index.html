@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações: Covid-19</title>
+    <link rel="stylesheet" href="API's/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="API's/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="API's/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/CSS" href="css/style.css">
+    <link rel="icon" href="img/icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- ACCORDION -->
+    
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+</head>
+
+<body id="container">
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="fase.html">Fase COVID</a></li>
+                <li><a href="cadastro.html">Vacinação</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><input id="btn1" type="button" value="Acessibilidade" onclick="acessivel()"></li>
+                <li id="dia"></li>
+                <li id="hora"></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        //Dia
+        var d = new Date();
+        var data = d.getDate();
+        var hora = d.getHours();
+        var mes = d.getMonth();
+        var ano = d.getFullYear();
+        // <li id="dia"></li>
+        document.getElementById("dia").innerHTML = data + "/" + mes + "/" + ano;
+        //Hora
+        var hora = d.getHours();
+        var minutos = d.getMinutes();
+        document.getElementById("hora").innerHTML = hora + ":" + minutos;
+
+        //  Uso do método Scroll
+
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                var target = $(this.hash);
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            });
+        });
+    </script>
+    <!-- <button  >Trocar estilo</button> -->
+    <br>
+    <main>
+        <div id="banner">
+            <img id="imgbanner" onclick="banner()" src="img/banner4.jpeg" alt="">
+            <h2 id="txtbanner" style="display: none;">Diga sim à vacina. <br> Isso pode salvar a sua vida !</h2>
+        </div>
+
+        <!--1)Informações sobre Vacinas aprovadas em fase emergencial (Informando eficácia e métodos de cada uma)-->
+        <h2> Vacinas aprovadas</h2>
+        <div id="accordion">
+            <h3>Coronavac</h3>
+            <div>
+                <h3>Coronavac</h3>
+                <ul>
+                    <li>Situação: Vacina aprovada pela Anvisa para uso emergencial no dia 17 de janeiro de 2021. </li>
+                    <li>Desenvolvedor: Sinovac (China) </li>
+                    <li>País de origem: China </li>
+                    <li>Feita em parceria com: Instituto Butantan (SP) </li>
+                    <li>Estados no Brasil em que foi testada: São Paulo, Rio de Janeiro, Minas Gerais, Distrito Federal,
+                        Paraná e Rio Grande do Sul, em 22 centros de pesquisa</li>
+                    <li>Voluntários: No Brasil, 13 mil (inicialmente eram 9 mil) </li>
+                    <li>Boas práticas de fabricação: Inspeção feita no Butantan entre 30/11 e 4/12. Certificação
+                        publicada em 21/12. </li>
+                    <li>Eficácia: Eficácia global de 50,38%. Eficácia de 78% em casos leves e de 100% em casos graves e
+                        moderados.</li>
+                </ul>
+            </div>
+            <h3>Oxford</h3>
+            <div>
+                <h3>Vacina de Oxford(ChAdOx1 nCoV-19)</h3>
+                <ul>
+                    <li>Situação: Vacina aprovada pela Anvisa para uso emergencial no dia 17 de janeiro de 2021.</li>
+                    <li>Desenvolvedor: Universidade de Oxford e AstraZeneca</li>
+                    <li>País de origem: Reino Unido</li>
+                    <li>Feita em parceria com: Fiocruz, Unifesp e Ministério da Saúde.</li>
+                    <li>Estados no Brasil em que foi testada: São Paulo, no Centro Paulista de Investigação Clínica
+                        (Cepic), e na Bahia, na Instituição Obras Sociais Irmã Dulce</li>
+                    <li>Voluntários: 10 mil no Brasil</li>
+                    <li>Boas práticas de fabricação: Inspeção feita na Fiocruz entre 7/12 e 4/12. Certificação publicada
+                        em 23/12.</li>
+                    <li>Eficácia: Eficácia média de 70,4%. No regime de dosagem com duas completas atingiu 62,1% de
+                        eficácia. Com dose fracionada e dose completa, atingiu 90% de eficácia.</li>
+                </ul>
+            </div>
+            <h3>Pfizer/BioNTech</h3>
+            <div>
+                <h3>Vacina da Pfizer/BioNTech (mRNA BNT162)</h3>
+                <ul>
+                    <li>Situação: A Pfizer enviou à Anvisa o pedido de registro definitivo da vacina da Pfizer no dia 6
+                        de fevereiro de 2021; 100% da documentação do pedido de registro está sendo analisada. </li>
+                    <li>Desenvolvedor: Pfizer e BioNTech</li>
+                    <li>País de origem: EUA/Alemanha</li>
+                    <li>Feita em parceria com: Centro Paulista de Investigação Clínica (Cepic), em São Paulo, e
+                        Instituição Obras Sociais Irmã Dulce, na Bahia.</li>
+                    <li>Estados no Brasil em que foi testada: São Paulo e Bahia.</li>
+                    <li>Voluntários: 2.900 no Brasil (São Paulo e Bahia) e mais de 43 mil no mundo.</li>
+                    <li>Boas práticas de fabricação: Certificação de duas fábricas publicada em 28/12. Uma fábrica já
+                        tinha certificação da Anvisa, mas ainda precisa enviar dados.</li>
+                    <li>Eficácia: 90% eficaz.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <!--2) Protocolos de combate adotados (Vide OMS)-->
+        <section>
+            <h2>Protocolos de combate</h2>
+            <img id="img-1" src="img/alcoolgel.jpeg" alt="">
+            <img id="img-2" src="img/distanciamento.jpeg" alt="">
+            <img id="img-3" src="img/lavamao.jpeg" alt="">
+            <img id="img-4"
+                src="img/escudo-proteger-o-personagem-do-mundo-usando-mascara-medica-protetora-contra-coronavirus-virus-corona-mundial-e-conceito-de-ataque-covid-19-e-ataque-pandemico_1.jpg"
+                alt="">
+
+
+        </section>
+        <!--3)Potenciais técnicas de tratamento e/ou medicamentos-->
+        <section id="medicamentos">
+            <h2>Medicamentos Potenciais Para o Tratamento</h2>
+
+            <article>
+                <h3>Remdesivir:</h3>
+                <p>É o primeiro antiviral aprovado contra o coronavírus e que é capaz de impedir a replicação do vírus.
+                    Este medicamento está aprovado apenas para ser usado em adultos internados com pneumonia no
+                    hospital, que não estejam precisando de ventilador;</p>
+            </article>
+            <article>
+                <h3>Regn-CoV2:</h3>
+                <p>
+                    É popularmente conhecido como coquetel de anticorpos e é constituído pelos medicamentos Casirivimabe
+                    e Imdevimabe, que são anticorpos monoclonais que atuam impedindo a entrada do vírus nas células.
+                    Este coquetel só pode ser usado em hospitais e não é recomendado para pacientes graves.
+                </p>
+            </article>
+            <article>
+                <h3>E os remédios que são usados para aliviar os sintomas, como:</h3>
+                <p>Antipiréticos: para diminuir a temperatura e combater a febre;</p>
+                <p>Analgésicos: para aliviar as dores musculares por todo o corpo;</p>
+                <p>Antibióticos: para tratar possíveis infecções bacterianas que possam surgir junto com a COVID-19.</p>
+            </article>
+        </section>
+        <br>
+        <!--6) Galeria de fotos que contenha fotos referente a campanha de vacinação-->
+        <section id="galeria">
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="slide1" name="slide" checked>
+                    <label for="slide1"></label>
+                    <img src="img/Campanha1.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide2" name="slide">
+                    <label for="slide2"></label>
+                    <img src="img/Campanha2.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide3" name="slide">
+                    <label for="slide3"></label>
+                    <img src="img/Campanha3.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide4" name="slide">
+                    <label for="slide4"></label>
+                    <img src="img/Campanha4.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide5" name="slide">
+                    <label for="slide5"></label>
+                    <img src="img/Campanha5.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide6" name="slide">
+                    <label for="slide6"></label>
+                    <img src="img/Campanha6.jpeg" />
+                </li>
+                <li>
+                    <input type="radio" id="slide7" name="slide">
+                    <label for="slide7"></label>
+                    <img src="img/Campanha7.jpeg" />
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p><b>Fernanda | Helena | Monique | Pollyana | Rafaela | &copy; 2021 </b></p>
+
+    </footer>
+</body>
+
+</html>

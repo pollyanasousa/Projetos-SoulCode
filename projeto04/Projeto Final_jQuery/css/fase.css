@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+table,
+td,
+th {
+    border: 1px solid;
+}
+
+td {
+    width: 150px;
+    text-align: center;
+}
+
+h2 {
+    color: #595672;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 10px;
+}
+
+#menu {
+    position: fixed;
+    background-color: aliceblue;
+    display: flex;
+    height: 36px;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 22px;
+    z-index: 2000;
+}
+
+#menu a {
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Antonio', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+#menu li input {
+    font-weight: 600;
+    font-family: 'Antonio', sans-serif;
+    border: thin white;
+    background-color: rgba(250, 235, 215, 0);
+    font-size: 22px;
+    color: black;
+}
+
+#menu li {
+    font-weight: 600;
+    font-family: 'Antonio', sans-serif;
+    margin-right: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    background-color: teal;
+    height: 80px;
+}
+
+footer p {
+    padding-top: 35px;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+#f1 {
+    background-color: red;
+}
+
+#f2 {
+    background-color: orange;
+}
+
+#f3 {
+    background-color: yellow;
+}
+
+#f4 {
+    background-color: rgb(6, 194, 6);
+}
+
+#f5 {
+    background-color: rgb(35, 174, 221);
+}
+
+#ocupacao {
+    margin: 20px auto;
+    width: 400px;
+}
+
+#ocupacao td input {
+    width: 300px;
+    text-align: center;
+}
+
+#ocupacao td {
+    padding: 10px;
+}
+
+div #frase {
+    text-align: center;
+}
